@@ -66,3 +66,19 @@ in `planning.json`, which contains around 10k records.
 
 For any additional questions on the task please feel free to email
 `sundara.amancharla@aspaara.com`.
+
+
+How to run the project:
+
+Create a virtual environment for the project(assuming you have created the virtual environment, follow the below instructions)
+
+The project has 2 parts. Script and the api file.
+
+1) Open the project in your favorite IDE and activate the Virtual Environment.
+2) Install requirments using 'pip install -r requirements.txt'
+3) Run the following command to create initiate sqlite database and create tables using model. Command: uvicorn main:app --reload
+4) You will see a database file by the name of planning.db in your main directory. (So far so good)
+5) Now go into the scripts folder in the project and run the 'load_json_to_db.py' file. You can run it using the command 'python load_json_to_db' or you can directly run it through your IDE (if you're using PyCharm then simply right click anywhere in the file and select 'run load_json_to_db' option
+6) Instruction 5 will populate the table with planning.json file data. 
+7) main.py file contains all of the API's to display data. 
+8) Templates have been also used to display a limited amount of data just for UI purpose to see the implementation. 
