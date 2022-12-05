@@ -1,6 +1,4 @@
-from pydantic import BaseModel
-from pydantic.schema import Optional
-from sqlalchemy import Column, Boolean, ForeignKey, Integer, String, Float, DateTime, JSON, TIMESTAMP
+from sqlalchemy import Column, Boolean, ForeignKey, Integer, String, Float
 
 from databse import Base
 

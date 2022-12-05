@@ -10,35 +10,42 @@
 
 </head>
 <body class="container mt-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Original Id</th>
-          <th scope="col">Talent Id</th>
-          <th scope="col">Talent Name</th>
-          <th scope="col">Total Hours</th>
-          <th scope="col">Start Date</th>
-          <th scope="col">Is Unassigned</th>
-          <th scope="col">Required Skills</th>
-        </tr>
-      </thead>
-      <tbody id="table-body">
-        {% for data in model_data %}
+    <div style="overflow: scroll; height: 500px;">
+        <table class="table">
+          <thead>
             <tr>
-              <th scope="row">{{data.original_id}}</th>
-              <td>{{data.talent_id}}</td>
-              <td>{{data.talent_name}}</td>
-              <td>{{data.total_hours}}</td>
-              <td>{{data.start_date}}</td>
-              <td>{{data.is_unassigned}}</td>
-              <td>{{data.required_skills}}</td>
+              <th scope="col">Id</th>
+              <th scope="col">Original Id</th>
+              <th scope="col">Talent Id</th>
+              <th scope="col">Talent Name</th>
+              <th scope="col">Total Hours</th>
+              <th scope="col">Start Date</th>
+              <th scope="col">Is Unassigned</th>
+              <th scope="col">Required Skills</th>
             </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+          </thead>
+          <tbody id="table-body">
+            {% for data in model_data %}
+                <tr>
+                  <td>{{data.id}}</td>
+                  <td>{{data.original_id}}</td>
+                  <td>{{data.talent_id}}</td>
+                  <td>{{data.talent_name}}</td>
+                  <td>{{data.total_hours}}</td>
+                  <td>{{data.start_date}}</td>
+                  <td>{{data.is_unassigned}}</td>
+                  <td>{{data.required_skills}}</td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
     <form action="/search">
         <input class="form-control mt-2" type="search" name="query" placeholder="Search">
         <button type="submit" class="btn btn-outline-success">Search</button>
+    </form>
+    <form class="mt-2" action="/">
+        <button type="submit" class="btn btn-outline-success"><- Go Back</button>
     </form>
 </body>
 
