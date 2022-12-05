@@ -78,7 +78,11 @@ The project has 2 parts. Script and the api file.
 2) Install requirments using 'pip install -r requirements.txt'
 3) Run the following command to create initiate sqlite database and create tables using model. Command: uvicorn main:app --reload
 4) You will see a database file by the name of planning.db in your main directory. (So far so good)
+
+Script to populate db
 5) Now go into the scripts folder in the project and run the 'load_json_to_db.py' file. You can run it using the command 'python load_json_to_db' or you can directly run it through your IDE (if you're using PyCharm then simply right click anywhere in the file and select 'run load_json_to_db' option
 6) Instruction 5 will populate the table with planning.json file data. 
 7) main.py file contains all of the API's to display data. 
 8) Templates have been also used to display a limited amount of data just for UI purpose to see the implementation. 
+
+After following the above instructions, you can simply hit http://127.0.0.1:8000/ url in the browser and interact with all the API's. It is a very basic implementation of the 3 mentione API's just to deliver the idea of the task and its solution. Might not be the best solution but tried my best in the given time. 
